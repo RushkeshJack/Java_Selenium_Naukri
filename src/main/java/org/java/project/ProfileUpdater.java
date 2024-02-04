@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class ProfileUpdater {
+public class ProfileUpdaterApplication {
 
     public static void profileUpdate(String username, String password) {
         WebDriver driver = new ChromeDriver();
