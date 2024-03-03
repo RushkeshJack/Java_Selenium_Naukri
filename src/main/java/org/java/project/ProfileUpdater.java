@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class ProfileUpdaterApplication {
+public class ProfileUpdater {
 
     public static void profileUpdate(String username, String password) {
         WebDriver driver = new ChromeDriver();
@@ -68,8 +68,8 @@ public class ProfileUpdaterApplication {
     	 int count = 2;
          while (count > 0) {
              profileUpdate("rdkhandekar965@gmail.com", "Wildtiger@123");
-//             profileUpdate("rushikeshkhandekar@gmail.com", "Wildtiger@123");
-//             profileUpdate("rdkhandekar06@gmail.com", "Wildtiger@123");
+             profileUpdate("rushikeshkhandekar@gmail.com", "Wildtiger@123");
+             profileUpdate("rdkhandekar06@gmail.com", "Wildtiger@123");
              count--;
              try {
                  TimeUnit.SECONDS.sleep(30);
@@ -78,7 +78,7 @@ public class ProfileUpdaterApplication {
              }
          }
          
-         //main(null);
+         main(null);
          
     }
     
@@ -86,12 +86,11 @@ public class ProfileUpdaterApplication {
     	
     	while (true) {
     		java.time.LocalTime currentTime = java.time.LocalTime.now();
-//    		if (currentTime.getHour() == 22 && currentTime.getMinute() == 25 && currentTime.getSecond() == 00) {
-//    			codeAt7Am();
-//    			break;
-//    		}
+    		if (currentTime.getHour() == 22 && currentTime.getMinute() == 25 && currentTime.getSecond() == 00) {
+    			codeAt7Am();
+    			break;
+    		}
 
-    		codeAt7Am();
     		
     		try {
     			TimeUnit.SECONDS.sleep(1);
