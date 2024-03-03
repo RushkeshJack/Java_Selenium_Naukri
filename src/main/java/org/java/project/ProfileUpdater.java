@@ -1,6 +1,6 @@
 package org.java.project;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.By; 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -40,7 +40,7 @@ public class ProfileUpdater {
 
             TimeUnit.SECONDS.sleep(5);
 
-            String newResumeHeadline = "2+ years experience in Java, J2EE, Collection Framework, Multithreading, Spring, Spring MVC, Spring Boot, Spring REST, Spring security and Spring Microservices. Good understanding of MySQL database, Postman, Git & GitHub, Maven, SDLC, HTML, CSS, JS.";
+            String newResumeHeadline = "2+ years experience in Java, J2EE, Collection Framework, Multithreading, Spring, Spring MVC, Spring Boot, Spring REST, Spring Security, and Spring Microservices. Good understanding of MySQL database, Postman, GitHub, AWS IAM, RDS, EC2, Beanstalk, S3.";
             WebElement resumeHeadlineTextarea = driver.findElement(By.className("resumeHeadlineTxt"));
 
             TimeUnit.SECONDS.sleep(5);
@@ -48,7 +48,7 @@ public class ProfileUpdater {
             resumeHeadlineTextarea.sendKeys(newResumeHeadline);
             TimeUnit.SECONDS.sleep(5);
 
-            WebElement saveButton = driver.findElement(By.xpath("/html/body/div[6]/div[7]/div[2]/form/div[3]/div/button"));
+            WebElement saveButton = driver.findElement(By.xpath("/html/body/div[6]/div[8]/div[2]/form/div[3]/div/button"));
             TimeUnit.SECONDS.sleep(5);
 
             saveButton.click();
@@ -68,16 +68,17 @@ public class ProfileUpdater {
     	 int count = 2;
          while (count > 0) {
              profileUpdate("rdkhandekar965@gmail.com", "Wildtiger@123");
-             //profileUpdate("rushikeshkhandekar@gmail.com", "Wildtiger@123");
-             //profileUpdate("rdkhandekar06@gmail.com", "Wildtiger@123");
+//             profileUpdate("rushikeshkhandekar@gmail.com", "Wildtiger@123");
+//             profileUpdate("rdkhandekar06@gmail.com", "Wildtiger@123");
              count--;
-             System.out.println(java.time.LocalTime.now());
              try {
-                 TimeUnit.SECONDS.sleep(10);
+                 TimeUnit.SECONDS.sleep(30);
              } catch (InterruptedException e) {
                  e.printStackTrace();
              }
          }
+         
+         //main(null);
          
     }
     
@@ -85,11 +86,12 @@ public class ProfileUpdater {
     	
     	while (true) {
     		java.time.LocalTime currentTime = java.time.LocalTime.now();
-    		System.out.println(currentTime);
-    		if (currentTime.getHour() == 13 && currentTime.getMinute() == 27 && currentTime.getSecond() == 00) {
-    			codeAt7Am();
-    			break;
-    		}
+//    		if (currentTime.getHour() == 22 && currentTime.getMinute() == 25 && currentTime.getSecond() == 00) {
+//    			codeAt7Am();
+//    			break;
+//    		}
+
+    		codeAt7Am();
     		
     		try {
     			TimeUnit.SECONDS.sleep(1);
